@@ -1,2 +1,2 @@
-# ephemeris-jeanmeus
-Ephemeris ini menggunakan algoritma Jean Meus dengan bahasa Kotlin, sumber kode dari repositori https://github.com/KadzalikLab/EphemerisMeeus
+# ephemeris-jeanmeeus
+Ephemeris ini menggunakan algoritma Jean Meeus (reduksi vsop87) dengan bahasa Kotlin, sumber kode dari repositori https://github.com/KadzalikLab/EphemerisMeeus
