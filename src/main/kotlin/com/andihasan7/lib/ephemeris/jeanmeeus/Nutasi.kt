@@ -1,4 +1,4 @@
-package andihasan7.ephemeris.jeanmeus
+package com.andihasan7.lib.ephemeris.jeanmeeus
 
 object Nutasi {
     fun deltaPsiDanEpsilon(t: Double): DoubleArray {
