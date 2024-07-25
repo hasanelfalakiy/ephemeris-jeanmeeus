@@ -340,18 +340,20 @@ object MatahariBulanMeeus {
             )[2] + "\u2032" + desimal_ke_derajat(sudutParalaksB)[3] + "\u2033",
             String.format("%.5f", iluminasiB)
         )
+        println(" ")
+        println(EoT)
 
         //Hilangkan tanda dibawah ini "/*", bila ingin menampilkan rincian perhitungan
-        /*
+
 
         System.out.println("\n\nHari             = "+namahari(hari_ke));
-         System.out.println("Pukul            = "+(int)jam+":"+(int)menit+":"+(int)detik);
-        System.out.println("Bujur Geografis  = "+(int)derajat_bujur+"\u00B0"+(int)menit_bujur+"\u2032"+(int)detik_bujur+"\u2033");
-        System.out.println("lintang Geografis= "+(int)derajat_lintang+"\u00B0"+(int)menit_lintang+"\u2032"+(int)detik_lintang+"\u2033");
+        System.out.println("Pukul            = "+jam+":"+menit+":"+detik);
+        System.out.println("Bujur Geografis  = "+derajat_bujur+"\u00B0"+menit_bujur+"\u2032"+detik_bujur+"\u2033");
+        System.out.println("lintang Geografis= "+derajat_lintang+"\u00B0"+menit_lintang+"\u2032"+detik_lintang+"\u2033");
         System.out.println("Posisi Bulan ");
         System.out.println("Bujur Ekliptika Bulan (Lambda)         = "+desimal_ke_derajat(bujurB_nampak)[1]+"\u00B0"+desimal_ke_derajat(bujurB_nampak)[2]+"\u2032"+desimal_ke_derajat(bujurB_nampak)[3]+"\u2033");
         System.out.println("Lintang Ekliptika Bulan (Beta)         = "+desimal_ke_derajat(lintangB)[1]+"\u00B0"+desimal_ke_derajat(lintangB)[2]+"\u2032"+desimal_ke_derajat(lintangB)[3]+"\u2033");
-        System.out.println("Jarak bumi-bulan (Km)                  = "+(float)jarakBB);
+        System.out.println("Jarak bumi-bulan (Km)                  = "+jarakBB);
         System.out.println("Right Ascension Bulan (Alpha)          = "+desimal_ke_derajat(alphaBulanPukul)[1]+":"+desimal_ke_derajat(alphaBulanPukul)[2]+":"+desimal_ke_derajat(alphaBulanPukul)[3]);
         System.out.println("Right Ascension Bulan                  = "+desimal_ke_derajat(alphaBulan)[1]+":"+desimal_ke_derajat(alphaBulan)[2]+":"+desimal_ke_derajat(alphaBulan)[3]);
         System.out.println("Deklinasi Bulan (Delta)                = "+desimal_ke_derajat(deltaBulan)[1]+"\u00B0"+desimal_ke_derajat(deltaBulan)[2]+"\u2032"+desimal_ke_derajat(deltaBulan)[3]+"\u2033");
@@ -359,12 +361,12 @@ object MatahariBulanMeeus {
         System.out.println("True Altitude Bulan dilihat dari lokasi= "+desimal_ke_derajat(altitudeB)[1]+"\u00B0"+desimal_ke_derajat(altitudeB)[2]+"\u2032"+desimal_ke_derajat(altitudeB)[3]+"\u2033");
         System.out.println("Sudut paralaks Bulan                   = "+desimal_ke_derajat(sudutParalaksB)[1]+"\u00B0"+desimal_ke_derajat(sudutParalaksB)[2]+"\u2032"+desimal_ke_derajat(sudutParalaksB)[3]+"\u2033");
         System.out.println("Sudut jari-jari bulan                  = "+desimal_ke_derajat(sudutJariB)[1]+"\u00B0"+desimal_ke_derajat(sudutJariB)[2]+"\u2032"+desimal_ke_derajat(sudutJariB)[3]+"\u2033");
-        System.out.println("Iluminasi bulan                        = "+(float)iluminasiB);
+        System.out.println("Iluminasi bulan                        = "+iluminasiB);
 
         System.out.println("\nPosisi Matahari ");
         System.out.println("Bujur Ekliptika Matahari (Lambda)      = "+desimal_ke_derajat(bujurM_nampak)[1]+"\u00B0"+desimal_ke_derajat(bujurM_nampak)[2]+"\u2032"+desimal_ke_derajat(bujurM_nampak)[3]+"\u2033");
-        System.out.println("Lintang Ekliptika Matahari (Beta)      = "+(float)lintangM);
-        System.out.println("Jarak bumi-Matahari (Km)               = "+(float)jarakBm_M);
+        System.out.println("Lintang Ekliptika Matahari (Beta)      = "+lintangM);
+        System.out.println("Jarak bumi-Matahari (Km)               = "+jarakBm_M);
         System.out.println("Right Ascension Matahari (Alpha)       = "+desimal_ke_derajat(alphaM_pukul)[1]+":"+desimal_ke_derajat(alphaM_pukul)[2]+":"+desimal_ke_derajat(alphaM_pukul)[3]);
         System.out.println("Right Ascension Matahari (Alpha)       = "+desimal_ke_derajat(alphaMatahari)[1]+":"+desimal_ke_derajat(alphaMatahari)[2]+":"+desimal_ke_derajat(alphaMatahari)[3]);
         System.out.println("Deklinasi Matahari (Delta)             = "+desimal_ke_derajat(deltaMatahari)[1]+"\u00B0"+desimal_ke_derajat(deltaMatahari)[2]+"\u2032"+desimal_ke_derajat(deltaMatahari)[3]+"\u2033");
@@ -377,7 +379,7 @@ object MatahariBulanMeeus {
         System.out.println("bujur E bulan - bujut E matahari       = "+desimal_ke_derajat(BbdikurangiBm)[1]+"\u00B0"+desimal_ke_derajat(BbdikurangiBm)[2]+"\u2032"+desimal_ke_derajat(BbdikurangiBm)[3]+"\u2033");
         System.out.println("Sudut elongasi bulan-matahari          = "+desimal_ke_derajat(sudutElongasiBdanM)[1]+"\u00B0"+desimal_ke_derajat(sudutElongasiBdanM)[2]+"\u2032"+desimal_ke_derajat(sudutElongasiBdanM)[3]+"\u2033");
         System.out.println("Sudut Fase                             = "+desimal_ke_derajat(sudutFase_d)[1]+"\u00B0"+desimal_ke_derajat(sudutFase_d)[2]+"\u2032"+desimal_ke_derajat(sudutFase_d)[3]+"\u2033");
-        System.out.println("Delta T                                = "+(float)delta_T*86400);
+        System.out.println("Delta T                                = "+ delta_T * 86400);
 
 
         System.out.println("\n\t\t\t\tDetail Perhitungan");
@@ -385,7 +387,7 @@ object MatahariBulanMeeus {
         System.out.println("Bujur geografis          = "+bujur);
         System.out.println("julian day UT            = "+JD_UT);
         System.out.println("T  (UT)                  = "+T_UT);
-        System.out.println("delta_T                  = "+(float)delta_T);
+        System.out.println("delta_T                  = "+delta_T);
         System.out.println("julian day E (JDE) TD    = "+jde);
         System.out.println("T  (TD)                  = "+T_TD);
         System.out.println("tau                      = "+tau);
@@ -441,7 +443,7 @@ object MatahariBulanMeeus {
         System.out.println("Sudut elongasi B-M       = "+sudutElongasiBdanM);
         System.out.println("Perata waktu             = "+desimal_ke_derajat(EoT)[1]+"\u00B0"+desimal_ke_derajat(EoT)[2]+"\u2032"+desimal_ke_derajat(EoT)[3]+"\u2033");
 
-        // */
+        //
     }
 
     fun desimal_ke_derajat(desimal: Double): IntArray {
