@@ -1,13 +1,16 @@
 
 package com.andihasan7.lib.ephemeris.jeanmeeus
 
+/*
+ * Warning!!!, jangan dipakai yg ini, gunakan class EphemerisMeeus
+ */
 object MatahariBulanMeeus {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        val tanggal = 5
-        var bulan = 2
-        var tahun = 2023
+        val tanggal = 21
+        var bulan = 7
+        var tahun = 2024
         val timezone = 0.0
         val jam = 0.0
         val menit = 0.0

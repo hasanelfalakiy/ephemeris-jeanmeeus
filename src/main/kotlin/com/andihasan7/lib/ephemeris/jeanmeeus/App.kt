@@ -4,11 +4,13 @@ import com.andihasan7.lib.ephemeris.jeanmeeus.util.*
 
 fun main() {
 
-    val bujur = toDecimalCheck(112, 13, 0, true)
-    val lintang = toDecimalCheck(7, 47, 0, false)
+    //val bujur = toDecimalCheck(106, 33, 27.8, true)
+    val bujur = 0.0
+    //val lintang = toDecimalCheck(7, 1, 44.6, false)
+    val lintang = 0.0
     val jam = 0.0
     val jm = EphemerisMeeus(
-        5, 2, 2023, lintang, bujur,0.0, jam
+        20, 4, 2023, lintang, bujur,0.0, jam
     )
 
 
@@ -32,9 +34,10 @@ fun main() {
     val sudutJariB = toDegreeFullRound2(jm.sudutJariB)
     val iluminasiB = jm.iluminasiB
 
+    // posisi matahari
     val bujurM_nampak = toDegreeFullRound2(jm.bujurM_nampak)
-    val lintangM = jm.lintangM
-    val jarakBm_M = jm.jarakBm_M
+    val lintangM = jm.lintangM.round(2)
+    val jarakBm_M = jm.jarakBm_M.round(6) // km
     val alphaM_pukul = toDegreeFullRound2(jm.alphaM_pukul)
     val alphaMatahari = toDegreeFullRound2(jm.alphaMatahari)
     val deltaMatahari = toDegreeFullRound2(jm.deltaMatahari)
@@ -43,6 +46,7 @@ fun main() {
     val sudutParalaksM = toDegreeFullRound2(jm.sudutParalaksM)
     val sudutJariM = toDegreeFullRound2(jm.sudutJariM)
     val epsilon = toDegreeFullRound2(jm.epsilon)
+    val ghaM = toDegreeFullRound2(jm.hourAngleM)
     val BbdikurangiBm = toDegreeFullRound2(jm.BbdikurangiBm)
     val sudutElongasiBdanM = toDegreeFullRound2(jm.sudutElongasiBdanM)
     val sudutFase_d = toDegreeFullRound2(jm.sudutFase_d)
@@ -75,6 +79,7 @@ fun main() {
     println("Right Ascension Matahari (Alpha)       = $alphaMatahari")
     println("Deklinasi Matahari (Delta)             = $deltaMatahari")
     println("Azimuth Matahari dilihat dari lokasi   = $azimuthMatahari")
+    println("GHA Matahari                           = $ghaM")
     println("True Altitude M dilihat dari lokasi    = $altitudeM")
     println("Sudut paralaks Matahari                = $sudutParalaksM")
     println("Sudut jari-jari Matahari               = $sudutJariM")
@@ -105,7 +110,8 @@ fun main() {
     val ma = jm.ma
     val f = jm.f
     val e = jm.e
-    val hourAngleBulan = jm.hourAngleBulan
+    val jarakBBD = jm.jarakBB
+    val hourAngleBulan = toDegreeFullRound2(jm.hourAngleBulan)
     val azimuthBulanS = jm.azimuthBulanS
     val sudutFai = jm.sudutFai
     val sudutFase = jm.sudutFase
@@ -135,7 +141,7 @@ fun main() {
     println("Argumen bujur bulan      = $f")
     println("Eksentrisitas orbit      = $e")
     println("lintang bulan            = $lintangB")
-    println("jarak bumi-bulan         = $jarakBB")
+    println("jarak bumi-bulan         = $jarakBBD")
     println("sudutParalaks            = $sudutParalaksB")
     println("sudut jari2 Bulan        = $sudutJariB")
     println("Alpha Bulan              = $alphaBulan")
@@ -152,10 +158,11 @@ fun main() {
     val theta = jm.theta
     val theta_terkoreksi = jm.theta_terkoreksi
     val koreksiAberasi = jm.koreksiAberasi
-    val jarakBumi_Matahari = jm.jarakBumi_Matahari
+    val jarakBumi_Matahari = jm.jarakBumi_Matahari.round(6)
     val hourAngleM = jm.hourAngleM
     val azimuthM_selatan = jm.azimuthM_selatan
     val elongasiBdanM = jm.elongasiBdanM
+    val sudutParalaksMD = jm.sudutParalaksM.round(8)
     val EoT = toTimeFullRound2(jm.EoT)
 
     println("\n\t\t\t\tDetail Perhitungan Matahari")
@@ -175,7 +182,7 @@ fun main() {
     println("Azimuth Matahari S       = $azimuthM_selatan")
     println("Azimuth Matahari         = $azimuthMatahari")
     println("Altitude Matahari        = $altitudeM")
-    println("Sudut paralaks Matahari  = $sudutParalaksM")
+    println("Sudut paralaks Matahari  = $sudutParalaksMD")
     println("bujur Ek B - bujur Ek M  = $BbdikurangiBm")
     println("COS(Elongasi B M)        = $elongasiBdanM")
     println("Sudut elongasi B-M       = $sudutElongasiBdanM")
